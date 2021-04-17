@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Drum</title>
+</head>
+<link href="drum.css" rel="stylesheet">
+<body>
+
+      <div class="container">
+            <button  onclick="playAudio('audio-1')" data-key="65">A<span>clap</span></button>
+            <button  onclick="playAudio('audio-2')"data-key="83">S<span>hihat</span></button>
+            <button  onclick="playAudio('audio-3')"data-key="68">D<span>kick</span></button>
+            <button  onclick="playAudio('audio-4')"data-key="70">F<span>openhat</span></button>
+            <button  onclick="playAudio('audio-5')"data-key="71">G<span>boom</span></button>
+            <button  onclick="playAudio('audio-6')"data-key="72">H<span>ride</span></button>
+            <button  onclick="playAudio('audio-7')"data-key="74">J<span>snaze</span></button>
+            <button  onclick="playAudio('audio-8')"data-key="75">K<span>tom</span></button>
+            <button  onclick="playAudio('audio-9')"data-key="76">L<span>tink</span></button>
+      </div>
+       
+      <audio id="audio-1" data-key="65" src="sounds/mixkit-one-clap-481.wav"></audio>
+        <audio id="audio-2"data-key="83" src="sounds/Casio-MT-45-16-Beat.wav"></audio>
+          <audio id="audio-3"data-key="68" src="sounds/Electro-Tom.wav"></audio>
+            <audio id="audio-4"data-key="70" src="sounds/Electronic-Tom-1.wav"></audio>
+              <audio id="audio-5"data-key="71" src="sounds/Bass-Drum-1.wav"></audio>
+                <audio  id="audio-6"data-key="72" src="sounds/CYCdh_K1close_Kick-01.wav"></audio>
+                  <audio  id="audio-7"data-key="74" src="sounds/CYCdh_K1close_OpHat-07.wav"></audio>
+                    <audio  id="audio-8"data-key="75" src="sounds/CYCdh_K1close_Rim-01.wav"></audio>
+                      <audio id="audio-9" data-key="76" src="sounds/CYCdh_K1close_Snr-01.wav"></audio>
+     
+
+
+ <script>
+  function playAudio(element) {
+      var audio = document.getElementById(element);
+      if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+      
+    }
+
+    
+
+ </script>
+</body>
+</html>
